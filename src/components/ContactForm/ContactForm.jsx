@@ -53,7 +53,7 @@ export class ContactForm extends Component {
               title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
               required
             />
-            {/* <ErrorMessage name="name" /> */}
+            <ErrorMessage name="name" />
           </label>
           <label className={css.formlabel}>
             <span className={css.formtitle}>Number</span>
@@ -68,7 +68,7 @@ export class ContactForm extends Component {
               required
             />
           </label>
-          {/* <ErrorMessage name="number" /> */}
+          <ErrorMessage name="number" />
           <button className={css.btn} type="submit">
             Add contact
           </button>
