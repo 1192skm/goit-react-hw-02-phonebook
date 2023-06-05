@@ -32,25 +32,7 @@ export class App extends Component {
       contacts: prevState.contacts.filter(contact => contact.id !== contactId),
     }));
   };
-  handleInputChange = evt => {
-    const { name, value } = evt.currentTarget;
-    this.setState({ [name]: value });
-  };
-  handleSubmit = evt => {
-    const { name, number } = this.state;
-    evt.preventDefault();
-    const newContact = {
-      id: nanoid(),
-      name,
-      number,
-    };
-    // if (newContact.name !== this.state.contact.name) {
-    this.setState(({ contacts }) => ({
-      contacts: [newContact, ...contacts],
-    }));
-    // } else{alert(`${newContact.name} is already contact`);}
-    this.reset();
-  };
+
   handleFilter = evt => {
     this.setState({ filter: evt.currentTarget.value });
   };
